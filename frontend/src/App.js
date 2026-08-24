@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import "@/App.css";
 import Lenis from "lenis";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import EditorialMarquee from "@/components/EditorialMarquee";
-import Manifesto from "@/components/Manifesto";
-import Products from "@/components/Products";
-import Complementarity from "@/components/Complementarity";
-import Expertise from "@/components/Expertise";
-import Benefits from "@/components/Benefits";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import Home from "@/pages/Home";
+import ProductXGov from "@/pages/ProductXGov";
+import ProductEQuidade from "@/pages/ProductEQuidade";
+import Beneficios from "@/pages/Beneficios";
+import Comparar from "@/pages/Comparar";
+import Compliance from "@/pages/Compliance";
+import CanalEtica from "@/pages/CanalEtica";
 import { Toaster } from "@/components/ui/sonner";
 
 export default function App() {
@@ -31,21 +32,23 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-x-clip bg-[#020617] font-body text-slate-100 antialiased selection:bg-emerald-400 selection:text-slate-950">
-      <div className="noise-overlay" aria-hidden="true" />
-      <Header />
-      <main>
-        <Hero />
-        <EditorialMarquee />
-        <Manifesto />
-        <Products />
-        <Complementarity />
-        <Expertise />
-        <Benefits />
-        <Contact />
-      </main>
-      <Footer />
-      <Toaster theme="dark" position="bottom-right" />
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="min-h-screen overflow-x-clip bg-[#020617] font-body text-slate-100 antialiased selection:bg-emerald-400 selection:text-slate-950">
+        <div className="noise-overlay" aria-hidden="true" />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/produtos/xgovcontrol-iegm" element={<ProductXGov />} />
+          <Route path="/produtos/e-quidade" element={<ProductEQuidade />} />
+          <Route path="/beneficios" element={<Beneficios />} />
+          <Route path="/comparar-solucoes" element={<Comparar />} />
+          <Route path="/compliance-integridade" element={<Compliance />} />
+          <Route path="/canal-de-etica" element={<CanalEtica />} />
+        </Routes>
+        <Footer />
+        <Toaster theme="dark" position="bottom-right" />
+      </div>
+    </BrowserRouter>
   );
 }

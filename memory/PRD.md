@@ -22,14 +22,19 @@ Criar o design e a estrutura do site institucional da Africon, GovTech brasileir
 
 ## Implementado
 - 2026-08-24: Landing page completa com hero cinético (reveal mascarado linha a linha), núcleo de dados animado em SVG (gráfico de linha, barras, chips flutuantes, anéis orbitais), parallax no scroll, marquee editorial, manifesto em capítulos numerados (01/02/03), showcase dos produtos E-Quidade e XGovControl-IEG-M com gráficos animados (barras, gauge IEG-M, barras de progresso), seção de complementaridade, grid bento de áreas de atuação, benefícios, formulário de demonstração MOCKED com toast de confirmação, footer com logotipo gigante. Scroll suave com Lenis. Todos os elementos interativos com data-testid.
+- 2026-08-24 (fase 2, frontend-only conforme AFRICON_Emergent_Frontend_Prompt.txt): React Router com rotas /produtos/xgovcontrol-iegm, /produtos/e-quidade, /beneficios, /comparar-solucoes, /compliance-integridade, /canal-de-etica. Menu "Produtos" com dropdown acessível (desktop) e acordeão (mobile). Páginas de produto animadas com hero, desafios, 9 funcionalidades, timeline de 8 etapas, rotina do gestor, benefícios, perfis de usuário, FAQ e CTA final. Página Benefícios com toggle animado Antes/Depois. Página Comparar Soluções com tabela responsiva (cards no mobile), capacidades comuns, diferenças e seletor interativo de 5 perguntas com recomendação indicativa. Página de Compliance com conteúdo original (10 princípios, 10 diretrizes, não retaliação). Canal de Ética com formulário multi-etapas (6 passos), validação inline, máscara de telefone BR, anexos simulados, revisão, protocolo simulado com botão de copiar — sem persistência. SEO/metadata por página. Arquivos: pages/*, components/ProductBlocks.jsx, ScrollToTop.jsx, usePageMeta.js, Header.jsx e Footer.jsx reescritos.
+
+## Placeholders que exigem backend na próxima fase
+- Formulário "Solicite uma demonstração" (home) — envio/persistência real
+- Canal de Ética — envio seguro, armazenamento e upload real de evidências
 
 ## Backlog priorizado
-- P0: Envio real do formulário de demonstração (salvar leads no MongoDB ou Resend)
-- P1: Páginas de detalhe por produto (E-Quidade e XGovControl-IEG-M)
-- P1: Seção de cases/depoimentos de municípios
+- P0: Backend real para formulário de demonstração e Canal de Ética (envio seguro, armazenamento, upload de evidências)
+- P1: Seção de cases/depoimentos de municípios (quando houver dados reais)
 - P2: Blog/insights GovTech
 - P2: Versão bilíngue (EN)
 
 ## Próximas tarefas
 1. Persistir leads do formulário no backend
-2. Área de login para gestores (dashboard demo)
+2. Envio real e armazenamento seguro do Canal de Ética
+3. Área de login para gestores (dashboard demo)
