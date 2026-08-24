@@ -1,0 +1,146 @@
+{
+  "theme": "dark",
+  "typography": {
+    "font_families": {
+      "headings": "Outfit, sans-serif",
+      "body": "Plus Jakarta Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "rules": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl tracking-tighter font-black",
+      "h2": "text-4xl md:text-5xl tracking-tight font-bold",
+      "h3": "text-2xl md:text-3xl tracking-tight font-semibold",
+      "body": "text-base md:text-lg leading-relaxed text-slate-300",
+      "overline": "uppercase tracking-[0.2em] text-xs font-bold text-emerald-400"
+    },
+    "imports": [
+      "@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');"
+    ]
+  },
+  "colors": {
+    "background": "#020617",
+    "surface": "#0f172a",
+    "surface_glass": "rgba(15, 23, 42, 0.6)",
+    "primary": "#34d399",
+    "secondary": "#22d3ee",
+    "text_primary": "#f8fafc",
+    "text_secondary": "#94a3b8",
+    "border": "rgba(255,255,255,0.1)"
+  },
+  "visual_enhancers": {
+    "surfaces": [
+      "Glassmorphism for sticky header and floating cards: bg-slate-900/60 backdrop-blur-xl border border-white/10",
+      "Tracing Beam / Aceternity effect for primary product cards: glowing border that travels around the edge.",
+      "Neo-Brutalist touches in the grid: 1px borders, sharp edges, no soft shadows, purely ambient glow."
+    ],
+    "textures": [
+      "Subtle noise overlay (opacity 2-3%) across the entire site to remove digital flatness."
+    ],
+    "motion": [
+      "Lenis smooth scrolling (momentum).",
+      "Masked line-by-line reveal on load for the Hero H1 using Framer Motion.",
+      "Framer-motion scroll-reveals (staggered fade-up) for grids and lists.",
+      "Micro-interactions: Buttons have a slight scale-up on hover and inner glow.",
+      "Slow editorial marquee (infinite scroll) separating hero and about."
+    ]
+  },
+  "components_to_use": [
+    "framer-motion (for all animations)",
+    "@studio-freight/react-lenis (for smooth scrolling wrapper)",
+    "react-fast-marquee (for editorial marquee)",
+    "@phosphor-icons/react (for icons)"
+  ],
+  "layouts": {
+    "hero": "Full height (min-h-screen) with central alignment, massive kinetic typography, glowing call-to-action.",
+    "bento_grid": "Mode A (Tetris Grid) for 'Areas of Expertise'. cols-1 md:cols-12. Mix of col-span-4, col-span-8 to create asymmetry.",
+    "manifesto": "Numbered chapters (01, 02, 03). Large mono-spaced numbers on the left (col-span-4), rich text on the right (col-span-8).",
+    "spacing": "Extremely generous. Use py-24 or py-32 for section padding."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1746470621261-f176b4b124a9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMG5ldHdvcmslMjBmdXR1cmlzdGljJTIwYmx1ZSUyMGdyZWVufGVufDB8fHx8MTc4NzU5MzU4MHww&ixlib=rb-4.1.0&q=85",
+        "category": "Hero Background / Fallback Texture",
+        "description": "Glowing green and blue swirls on dark background for abstract AI vibe"
+      },
+      {
+        "url": "https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Product Showcase (E-Quidade)",
+        "description": "Close-up of a digital interface showcasing futuristic graphs and data analytics"
+      },
+      {
+        "url": "https://images.pexels.com/photos/27141314/pexels-photo-27141314.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "Product Showcase (XGovControl-IEG-M)",
+        "description": "Dynamic digital interface showcasing technology with interactive design elements"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1452696193712-6cabf5103b63?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjd8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBnZW9tZXRyaWMlMjBhcmNoaXRlY3R1cmUlMjBnbGFzc3xlbnwwfHx8fDE3ODMyMzIxMjN8MA&ixlib=rb-4.1.0&q=85",
+        "category": "Manifesto / About Image",
+        "description": "Reflection of sky in glass of a geometric modern building, representing modern public administration"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1683064325134-3acfdef9c6d7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHw0fHxmdXR1cmlzdGljJTIwZGF0YSUyMGFic3RyYWN0JTIwd2F2ZXN8ZW58MHx8fHwxNzg3NTkzNTgwfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Complementarity Section Background",
+        "description": "Abstract blue background with wavy lines representing data integration"
+      }
+    ]
+  },
+  "sections_to_build": [
+    {
+      "name": "Header",
+      "instructions": "Sticky header, Glassmorphism (bg-slate-950/60 backdrop-blur-md). Logo on left, nav links (Início, Sobre, Produtos, Áreas de Atuação, Contato) centered, CTA right."
+    },
+    {
+      "name": "Hero",
+      "instructions": "Kinetic typography for slogan 'Africon — GovTech de Inteligência Artificial, Dados e Software de Gestão para transformar informação em melhores decisões públicas'. Masked line-by-line reveal via framer-motion. Buttons: 'Conheça nossas soluções'. Abstract 3D/particle background or simple glowing gradient if 3D is heavy."
+    },
+    {
+      "name": "Editorial Marquee",
+      "instructions": "Slow continuous scroll using react-fast-marquee. Text: 'Inteligência Artificial • Dados • Software de Gestão • Decisões Públicas'. Font: mono or wide sans, transparent text with 1px stroke."
+    },
+    {
+      "name": "About / Manifesto",
+      "instructions": "Numbered chapters (01. Nossa Visão, 02. O Desafio, 03. A Solução). Large text, scroll-triggered fade-ins. Use geometric glass architecture image as accent."
+    },
+    {
+      "name": "Products Showcase",
+      "instructions": "Two massive sections. First for E-Quidade (Educação) using dashboard UI image. Second for XGovControl-IEG-M (Gestão Municipal). Overlay text on dark transparent cards. Reveal on scroll."
+    },
+    {
+      "name": "Complementarity",
+      "instructions": "Visual flow showing how E-Quidade + XGovControl integrate. Use abstract data waves image in background."
+    },
+    {
+      "name": "Areas of Expertise Grid",
+      "instructions": "6 cards (governança, educação, indicadores municipais, gestão de evidências, análise de documentos, inteligência aplicada) in a Tetris Bento Grid. Hover effects: border glows, icons lift."
+    },
+    {
+      "name": "Benefits",
+      "instructions": "List of GovTech benefits with modern iconography, staggered entrance animations on scroll."
+    },
+    {
+      "name": "Contact / Demo",
+      "instructions": "Mocked visual form. 'Solicite uma demonstração'. Modern input fields with cyan focus rings. Glowing submit button."
+    },
+    {
+      "name": "Footer",
+      "instructions": "Massive py-32 padding. Huge 'AFRICON' logo at the bottom. Links and legal text."
+    }
+  ],
+  "accessibility": {
+    "contrast": "Ensure text over gradients or images has sufficient drop-shadow or overlay (bg-slate-950/50).",
+    "motion": "Respect prefers-reduced-motion for the line-by-line reveals and marquee.",
+    "test_ids": "All interactive buttons and links MUST have data-testid attributes (e.g., data-testid='hero-cta-button')."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Install required dependencies via yarn if missing: framer-motion, lucide-react, @phosphor-icons/react, react-fast-marquee, clsx, tailwind-merge, @studio-freight/react-lenis.",
+    "Contact form must be visual demo only (mocked), no backend integration needed."
+  ]
+}
