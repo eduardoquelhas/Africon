@@ -38,3 +38,9 @@ Criar o design e a estrutura do site institucional da Africon, GovTech brasileir
 1. Persistir leads do formulário no backend
 2. Envio real e armazenamento seguro do Canal de Ética
 3. Área de login para gestores (dashboard demo)
+
+## Kit LinkedIn (Junho/2026)
+- `/app/africon_linkedin_logo_1200.png` — foto de perfil (1200x1200, quadrado, seguro para corte circular)
+- `/app/africon_linkedin_capa_empresa_2256x382.png` — capa da página da empresa (1128x191 @2x)
+- `/app/africon_linkedin_capa_perfil_1584x396.png` — capa de perfil pessoal (1584x396)
+- Gerados via `/app/scripts/linkedin_assets.py` (SVG + cairosvg), paleta oficial (#020617, #34d399, #22d3ee)
